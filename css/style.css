@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Common Classes */
+
+.wrapper{border:1px solid #CCC; border-radius:4px;}
+
+/* Utility Classes */
+
+.cus-hspacer-10{margin-top:10px;}
+.cus-hspacer-15{margin-top:15px;}
+.cus-hspacer-20{margin-top:20px;}
+.cus-hspacer-25{margin-top:25px;}
+.cus-hspacer-30{margin-top:30px;}
+
+/* Header */
+
+.branding{height:70px; width:150px; background:#999999;}
+
+
+/* Carousel Home */
+
+.carousel{padding:0px; color:#FFF; margin-bottom:30px;}
+.item{background:#336;height:340px; padding:30px 70px;}
+
+/* Deals Form */
+
+.dealsForm{border:1px solid #CCC; border-radius:5px; padding:20px;}
+.form-control option{padding:5px;}
+.bottomPanel{border:1px solid #CCC; border-radius:5px; padding:20px; height:200px;}
