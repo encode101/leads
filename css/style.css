@@ -2,8 +2,8 @@
 /* CSS Document */
 
 /* Common Classes */
-
-.wrapper{border:1px solid #CCC; border-radius:4px;}
+body{background:#EEE;}
+.wrapper{border:1px solid #CCC; border-radius:4px;box-shadow:0 0 10px 2px #CCC; margin-bottom:30px; background:#FFF;}
 
 /* Utility Classes */
 
@@ -25,6 +25,37 @@
 
 /* Deals Form */
 
-.dealsForm{border:1px solid #CCC; border-radius:5px; padding:20px;}
+.dealsForm{border:1px solid #CCC; border-radius:5px; padding:20px; background:#FFF;}
 .form-control option{padding:5px;}
-.bottomPanel{border:1px solid #CCC; border-radius:5px; padding:20px; height:200px;}
+.bottomPanel{border:1px solid #CCC; border-radius:5px; padding:20px;}
+.services{border:1px solid #CCC; border-radius:5px; padding:20px;}
+.services .element{height:150px; border:1px solid #CCC; border-radius:5px;}
+.services .element:hover{box-shadow:0 0 10px 0px #CCC; border:1px solid #DDD; cursor:pointer;}
+
+.footer{text-align:center;}
+
+ul.bottom-nav {
+    float: left;
+    height: 200px;
+    list-style-type: none;
+    margin: 0px 20px 0 0;
+    padding: 0;
+    width: 165px;
+	background:#CCC;
+}
+ul.bottom-nav li ul {
+    float: left;
+    list-style-type: none;
+    margin: 0 0 11px;
+    padding: 0;
+}
+ul.bottom-nav li {
+    clear: both;
+    float: left;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    width: 200px;
+	font-size:12px;
+}
+.video{height:165px; height:200px;}
