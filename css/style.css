@@ -40,8 +40,7 @@ ul.bottom-nav {
     list-style-type: none;
     margin: 0px 20px 0 0;
     padding: 0;
-    width: 165px;
-	background:#CCC;
+    width: 165px;	
 }
 ul.bottom-nav li ul {
     float: left;
@@ -59,3 +58,5 @@ ul.bottom-nav li {
 	font-size:12px;
 }
 .video{height:165px; height:200px;}
+.searchPanel{margin:30px 0px; background:#FFF; padding:20px 10px; border:1px solid #CCC;}
+.searchTitle{margin:0 0 20px 10px; font-size:20px; font-weight:bold; color:orange;}
