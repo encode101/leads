@@ -15,7 +15,7 @@
   </div>
   <div class="searchPanel">
     <p class="searchTitle"> For all your Local Needs in Bangalore.</p>
-    <form>
+    <form id="homeSearch">
       <div class="col-md-2">
         <select name="city" class="form-control">
           <option disabled="disabled">Please Select A City</option>
@@ -70,7 +70,7 @@
       	<div class="blockTitle">Shopping</div>
       </div>
     </div>
-    <div class="col-md-3 col-sm-3">
+    <div class="col-md-3 col-sm-3" id="realestate">
       <div class="element block-realestate">
       	<div class="blockTitle">Real Estate</div>
       </div>
@@ -88,6 +88,27 @@
 <div class="footer"> &copy; Copyright 2013. All Rights Reserved. View <a href="disclaimer.php">Disclaimer</a> </div>
 <div class="clearfix cus-hspacer-25"></div>
 </div>
+
+<!-- Generic Modal -->
+
+<div class="modal fade" id="profilePic" tabindex="-1" role="dialog" aria-labelledby="profilePic" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Profile Picture</h4>
+      </div>
+      <div class="modal-body">
+       <div id="profilePicHolder">
+   	    <img src="images/profile/large/bride_img1_large.jpg" width="552" height="577"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
 <script src="js/jquery-1.10.2.js"></script> 
 <script src="js/bootstrap.min.js"></script>
 <script src="js/typeahead.min.js"></script> 

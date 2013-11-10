@@ -1,29 +1,46 @@
 <?php
 	include('dbconf.php');
+	
+	$req = $_REQUEST['req'];
+	
+	switch($req){
 
 	// Get Matrimony Listing
 	
-	/* $listing_query = mysql_query("SELECT * FROM matrimony");
+	case "1":	
+	
+	$listing_query = mysql_query("SELECT * FROM matrimony");
 	?>
     <div class="panel panel-success">
-    <div class="panel-heading">Matrimonial Search Results (<em>30 of 500</em>)</div>
+    <div class="panel-heading">About (<em>2</em>) Results</div>
 	<table class="table">
+    <tr class="active" style="font-weight:bold;">
+    	<td>Profile</td>
+        <td>Name</td>
+        <td>Age</td>
+        <td>Gender</td>
+        <td>Action</td>
+    </tr>
 	<?php
 	while($row=mysql_fetch_array($listing_query)){
-		echo "<td><img src='images/profile.png' class='profileimg-small' /></td>";
+		echo "<td><a href='#profilePic' data-toggle='modal' data-target='#profilePic'><img src='images/".$row['profile_img']."' class='profileimg-small' /></a></td>";
 		//echo "<tr><td>".$row['id']."</td>";
 		echo "<td>".$row['name']."</td>";
 		echo "<td>".$row['age']."</td>";
 		echo "<td>".$row['gender']."</td>";			
 		echo "<td><div class='profileLocker'><a href='' class='btn btn-success pull-right'>View Profile</span></div></td></tr>";
 	}
-	echo "</table></div>"; */
-	
+	echo "</table></div>"; 
+	break;
+		
 	// Get Real Estate Listing
+	
+	case "2":
+	
 	$listing_query = mysql_query("SELECT * FROM realestate");
 	?>
     <div class="panel panel-success">
-    <div class="panel-heading">Real Estate Search Results (<em>30 of 500</em>)</div>
+    <div class="panel-heading">About (<em>2</em>) Results</div>
 	<table class="table">
     <tr class="active" style="font-weight:bold;">
     	<td>Property Type</td>
@@ -39,4 +56,5 @@
 		echo "<td>".$row['prop_source']."</td></tr>";	
 	}
 	echo "</table></div>";
+	}
 ?>
