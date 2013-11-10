@@ -100,7 +100,7 @@
       </div>
       <div class="modal-body">
        <div id="profilePicHolder">
-   	    <img src="images/profile/large/bride_img1_large.jpg" width="552" height="577"></div>
+   	    <img src="images/profile/large/profile_img2_large.jpg" width="552" height="577"></div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
