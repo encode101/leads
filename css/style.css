@@ -2,7 +2,7 @@
 /* CSS Document */
 
 /* Common Classes */
-body{background:#FFF;}
+body{background:#FFF; overflow-y:scroll;}
 .wrapper{border:0px solid #CCC; border-radius:4px; margin-bottom:30px; background:#FFF;}
 
 /* Utility Classes */
@@ -71,7 +71,8 @@ ul.bottom-nav li {
 .block-shopping{background:url(../images/block-shopping.jpeg) no-repeat right top; background-size:auto 100%;}
 .block-realestate{background:url(../images/block-realestate.png) no-repeat right bottom; background-size:100% auto;}
 .block-hotels{background:url(../images/block-hotels.png) no-repeat right bottom; background-size:100% auto;}
-.blockTitle{background:#390; opacity:0.7; color:#FFF; margin:35% 0 0 0; padding:5px 15px;  font-size:16px; text-shadow:0 1px #000;}
+.block-music{background:url(../images/block-music.png) no-repeat right bottom; background-size:100% auto;}
+.blockTitle{background:#390; opacity:0.7; color:#FFF; margin:38% 0 0 0; padding:5px 15px;  font-size:16px; text-shadow:0 1px #000;}
 .services .element:hover .blockTitle{background:#c30101;opacity:0.9;}
 .profileLocker{}
 .profileimg-small{width:50px; box-shadow:0 0 4px #CCC; border:1px solid #eee; cursor:pointer;}
