@@ -11,7 +11,9 @@
 <body>
 <div class="wrapper col-md-10 col-md-offset-1">
   <div class="page-header">
-    <div class="branding"><a href="index.php"><img src="images/ammiabba.png" width="199" height="32" alt="AmmiAbba" /></a></div>
+    <div class="branding pull-left"><a href="index.php"><img src="images/ammiabba.png" width="199" height="32" alt="AmmiAbba" /></a></div>
+    <div class="customer-care pull-right"><img src="images/customer-care.png" width="255" height="42" alt="Customer Care: 9886406573" /></div>
+    <div class="clearfix"></div>
   </div>
   <div class="searchPanel">
     <p class="searchTitle"> For all your Local Needs in Bangalore.</p>
@@ -25,7 +27,7 @@
         </select>
       </div>
       <div class="col-md-8 homesearchInputHolder">
-        <input type="text" class="form-control" placeholder="What Do You Want Today?" />
+        <input type="text" class="form-control" placeholder="E.g. Real Estate" />
       </div>
       <!-- <div class="col-md-3">
         <input type="text" class="form-control" placeholder="Locality" />
@@ -100,7 +102,7 @@
       </div>
       <div class="modal-body">
        <div id="profilePicHolder">
-   	    <img src="images/profile/large/profile_img2_large.jpg" width="552" height="577"></div>
+   	    <img src="images/profile/large/profile_img2_large.jpg" ></div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
