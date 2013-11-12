@@ -23,8 +23,10 @@
     </tr>
 	<?php
 	while($row=mysql_fetch_array($listing_query)){
-		echo "<td><a href='#profilePic' data-toggle='modal' data-target='#profilePic'><img src='images/".$row['profile_img']."' class='profileimg-small' /></a></td>";
-		//echo "<tr><td>".$row['id']."</td>";
+		$file = $row['profile_img'];	
+		$info = pathinfo($file);	
+		$file_name = $info['filename'];		
+		echo "<td><span class='modalCaller' id='".$file_name."_large'><img src='images/".$row['profile_img']."' class='profileimg-small' /></span></td>";
 		echo "<td>".$row['name']."</td>";
 		echo "<td>".$row['age']."</td>";
 		echo "<td>".$row['gender']."</td>";			
@@ -32,7 +34,7 @@
 	}
 	echo "</table></div>"; 
 	break;
-		
+	
 	// Get Real Estate Listing
 	
 	case "2":

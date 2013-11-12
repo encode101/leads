@@ -91,25 +91,25 @@
 <div class="clearfix cus-hspacer-25"></div>
 </div>
 
-<!-- Generic Modal -->
+<!-- Modal Template -->
 
-<div class="modal fade" id="profilePic" tabindex="-1" role="dialog" aria-labelledby="profilePic" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Profile Picture</h4>
+<div class="modal fade" id="modalGeneric" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Modal title</h4>
+        </div>
+        <div class="modal-body"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          <!--<button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
       </div>
-      <div class="modal-body">
-       <div id="profilePicHolder">
-   	    <img src="images/profile/large/profile_img2_large.jpg" ></div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
 
 <script src="js/jquery-1.10.2.js"></script> 
 <script src="js/bootstrap.min.js"></script>
