@@ -64,11 +64,24 @@
 }
 
 
-.isotope .item{height:150px; width:150px; border:1px solid #000; float:left; margin:10px;}
-.isotope .motherBlock{height:200px; width:400px; border:1px solid #CCC; margin:0 30px 30px 0;}
-.isotope .element{width:150px; margin:20px 20px 0px 0; border:1px solid #CCC; padding:20px; text-align:center; border-radius:4px;}
-.isotope .element:hover{box-shadow:0 0 10px 0px #CCC; border:1px solid #DDD;}
-.isotope #filters{margin:30px 0; padding:0px;}
-.isotope #filters li{float:left; margin:0 10px; list-style:none;}
+.item{height:150px; width:150px; border:1px solid #000; float:left; margin:10px;}
+.motherBlock{height:200px; width:400px; border:1px solid #CCC; margin:0 30px 30px 0;}
+.home .element{width:250px; height:150px; margin:20px 20px 0px 0; border:1px solid #CCC; text-align:center; border-radius:4px; padding:0px;}
+.element{width:150px; margin:20px 20px 0px 0; border:1px solid #CCC; padding:0px; text-align:center; border-radius:4px; padding:15px 0px; cursor:pointer;}
+.element:hover{box-shadow:0 0 10px 0px #CCC; border:1px solid #DDD;}
+#filters{margin:30px 0; padding:0px;}
+#filters li{float:left; margin:0 10px; list-style:none;}
 
 .container{}
+
+.block-islamic{background:url(../images/block_islamic.png) no-repeat center top;}
+.block-matrimonial{background:url(../images/block_matrimonial.jpg) no-repeat left top; background-size:100% auto;}
+.block-doctors{background:url(../images/block_doctor.png) no-repeat right top; background-size:auto 100%;}
+.block-repair{background:url(../images/block_repair.png) no-repeat center top; background-size:auto 100%;}
+.block-education{background:url(../images/block-education.jpg) no-repeat center bottom; background-size:100% auto;}
+.block-shopping{background:url(../images/block-shopping.jpeg) no-repeat right top; background-size:auto 100%;}
+.block-realestate{background:url(../images/block-realestate.png) no-repeat right bottom; background-size:100% auto;}
+.block-hotels{background:url(../images/block-hotels.png) no-repeat right bottom; background-size:100% auto;}
+.block-music{background:url(../images/block-music.png) no-repeat right bottom; background-size:100% auto;}
+.blockTitle{background:#390; opacity:0.7; color:#FFF; margin:40% 0 0 0; padding:5px 15px;  font-size:16px; text-shadow:0 1px #000;}
+.element:hover .blockTitle{background:#c30101;opacity:0.9;}
