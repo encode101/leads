@@ -27,7 +27,7 @@ jQuery(function($){
 				url:'getlisting.php',
 				data:'req=1',
 				beforeSend:function(){
-					$('#ajaxified-data').html(" <div style='text-align:center'><img src='images/spinner.gif' width='250' /></div>");
+					$('#ajaxified-data').html(" <div style='text-align:center'><img src='images/spinner_.gif' width='60' /></div>");
 				},
 				success:function(data){
 					$('#ajaxified-data').hide();
@@ -44,7 +44,7 @@ jQuery(function($){
 				url:'getlisting.php',
 				data:'req=2',
 				beforeSend:function(){
-					$('#ajaxified-data').html(" <div style='text-align:center'><img src='images/spinner.gif' width='250' /></div>");
+					$('#ajaxified-data').html(" <div style='text-align:center'><img src='images/spinner_.gif' width='60' /></div>");
 				},
 				success:function(data){
 					$('#ajaxified-data').hide();

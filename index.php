@@ -15,7 +15,7 @@
     <div class="customer-care pull-right"><img src="images/customer-care.png" width="255" height="42" alt="Customer Care: 9886406573" /></div>
     <div class="clearfix"></div>
   </div>
-  <div class="searchPanel">
+  <div class="searchPanel col-md-12">
     <p class="searchTitle"> For all your Local Needs in Bangalore.</p>
     <form id="homeSearch">
       <div class="col-md-2">
