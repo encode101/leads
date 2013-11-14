@@ -2,10 +2,10 @@
 
 jQuery(function($){
 	// cache container
-	var $container = $('#container');
+	var $container = $('#sub_cat_container');
 	// initialize isotope
 	
-	$container.isotope({ filter: '.transition' });
+	$container.isotope({ filter: '.metal' });
 	
 	// filter items when filter link is clicked
 	$('#filters a').click(function(){

@@ -70,3 +70,5 @@
 .element:hover{box-shadow:0 0 10px 0px #CCC; border:1px solid #DDD;}
 #filters{margin:30px 0; padding:0px;}
 #filters li{float:left; margin:0 10px; list-style:none;}
+
+.container{}
