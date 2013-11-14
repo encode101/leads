@@ -5,7 +5,7 @@ jQuery(function($){
 	var $container = $('#sub_cat_container');
 	// initialize isotope
 	
-	$container.isotope({ filter: '.metal' });
+	$container.isotope({ filter: '.home' });
 	
 	// filter items when filter link is clicked
 	$('#filters a').click(function(){
