@@ -58,6 +58,28 @@
 		echo "<td>".$row['prop_source']."</td></tr>";	
 	}
 	echo "</table></div>";
+	
+	case "3":
+	
+	$listing_query = mysql_query("SELECT * FROM realestate");
+	?>
+    <div class="panel panel-success">
+    <div class="panel-heading">About (<em>2</em>) Results</div>
+	<table class="table">
+    <tr class="active" style="font-weight:bold;">
+    	<td>Property Type</td>
+        <td>Price</td>
+        <td>Bedrooms</td>
+        <td>Posted By</td>
+    </tr>
+	<?php
+	while($row=mysql_fetch_array($listing_query)){
+		echo "<tr><td>".$row['prop_type']."</td>";
+		echo "<td>".$row['prop_price']."</td>";
+		echo "<td>".$row['prop_bedrooms']."</td>";	
+		echo "<td>".$row['prop_source']."</td></tr>";	
 	}
-	break;
+	echo "</table></div>";
+
+	} // End Of Switch
 ?>
