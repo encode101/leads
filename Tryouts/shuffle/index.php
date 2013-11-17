@@ -17,7 +17,7 @@
   <!-- Search Panel -->
   
   <div class="searchPanel col-md-12">
-    <form id="homeSearch">
+    <form id="homeSearch" action="searchengine.php" method="post">
       <div class="col-md-2">
         <select name="city" class="form-control">
           <option disabled="disabled">Please Select A City</option>
@@ -27,10 +27,10 @@
         </select>
       </div>
       <div class="col-md-6 homesearchInputHolder">
-        <input type="text" class="form-control" placeholder="E.g. Real Estate" />
+        <input type="text" name="searchquery" class="form-control" placeholder="E.g. Real Estate" />
       </div>
      <div class="col-md-2">
-        <input type="text" class="form-control" placeholder="Locality" />
+        <input type="text" class="form-control" placeholder="Locality" name="locality" />
       </div>
       <div class="col-md-2">
         <input type="submit" class="btn btn-success" value="Search" />
@@ -193,6 +193,15 @@
 <script src="js/bootstrap.min.js"></script> 
 <script src="js/jquery.isotope.min.js"></script> 
 <script src="js/typeahead.min.js"></script> 
+<?php /*
+	if(isset($_REQUEST['src'])){
+	?>
+    <script>
+    	 $('#ajaxified-data').isotope({filter: '<?php echo $_REQUEST['src']; ?>'});
+    </script>
+    <?php
+	}*/
+?>
 <script src="js/shuffle.js"></script> 
 <script src="js/main.js"></script>
 </body>

@@ -3,8 +3,7 @@
 jQuery(function($){
 	// cache container
 	var $container = $('#ajaxified-data');
-	// initialize isotope
-	
+	// initialize isotope	
 	$container.isotope({filter: '.home'});
 	
 	// Handling Individual Click On Any Category Items
