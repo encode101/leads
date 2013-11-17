@@ -7,69 +7,80 @@ jQuery(function($){
 	
 	$container.isotope({filter: '.home'});
 	
-	// filter items when filter link is clicked
+	// Handling Individual Click On Any Category Items
 
-	
-	$("#islamic, #matrimonials, #doctors, #education, #repairs, #shopping, #realestate, #hotels, #music").click(function(){
-		console.log($(this).attr('data-filter'));
-	  var selector = $(this).attr('data-filter');
-	  $container.isotope({
-			filter: selector
-		});
-	  return false;
-	});
-
-	$("#islamic").click(function(){
+	$("#islamic, #topMenu-islamic").click(function(){
 	  var selector = '.islamic';
 	  $container.isotope({ filter: selector });
+	  $("#topMenu li").removeClass("active");
+	  $("#topMenu-islamic").parent().addClass("active");
 	  return false;
 	});
 	
-	$("#shopping").click(function(){
+	$("#shopping, #topMenu-shopping").click(function(){
 	  var selector = '.shopping';
 	  $container.isotope({ filter: selector });
+	  $("#topMenu li").removeClass("active");
+	  $("#topMenu-shopping").parent().addClass("active");
 	  return false;
 	});
-	$("#matrimonials").click(function(){
+	$("#matrimonials, #topMenu-matrimonial").click(function(){
 	  var selector = '.matrimonials';
 	  $container.isotope({ filter: selector });
+	  $("#topMenu li").removeClass("active");
+	  $("#topMenu-matrimonial").parent().addClass("active");
 	  return false;
 	});
-	$("#doctors").click(function(){
+	$("#doctors, #topMenu-doctors").click(function(){
 	  var selector = '.doctors';
 	  $container.isotope({ filter: selector });
+	  $("#topMenu li").removeClass("active");
+	  $("#topMenu-doctors").parent().addClass("active");
 	  return false;
 	});
-	$("#education").click(function(){
+	$("#education, #topMenu-education").click(function(){
 	  var selector = '.education';
 	  $container.isotope({ filter: selector });
+	  $("#topMenu li").removeClass("active");
+	  $("#topMenu-education").parent().addClass("active");
 	  return false;
 	});
-	$("#repairs").click(function(){
+	$("#repairs, #topMenu-repair").click(function(){
 	  var selector = '.repairs';
 	  $container.isotope({ filter: selector });
+	  $("#topMenu li").removeClass("active");
+	  $("#topMenu-repair").parent().addClass("active");
 	  return false;
 	});
-	$("#realestate").click(function(){
+	$("#realestate, #topMenu-realestate").click(function(){
 	  var selector = '.realestate';
 	  $container.isotope({ filter: selector });
+	  $("#topMenu li").removeClass("active");
+	  $("#topMenu-realestate").parent().addClass("active");
 	  return false;
 	});
-	$("#hotels").click(function(){
+	$("#hotels, #topMenu-hotels").click(function(){
 	  var selector = '.hotels';
 	  $container.isotope({ filter: selector });
+	  $("#topMenu li").removeClass("active");
+	  $("#topMenu-hotels").parent().addClass("active");
 	  return false;
 	});
-	$("#music").click(function(){
+	$("#music, #topMenu-music").click(function(){
 	  var selector = '.music';
 	  $container.isotope({ filter: selector });
+	  $("#topMenu li").removeClass("active");
+	  $("#topMenu-music").parent().addClass("active");
 	  return false;
 	});
-	$("#home").click(function(){
+	$("#branding, #topMenu-home").click(function(){
 	  var selector = '.home';
 	  $container.isotope({ filter: selector });
+	  $("#topMenu li").removeClass("active");
+	  $("#topMenu-home").parent().addClass("active");
 	  return false;
 	});
 	
-
+	// End Of Script
+	
 });
