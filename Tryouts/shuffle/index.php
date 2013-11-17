@@ -27,7 +27,7 @@
         </select>
       </div>
       <div class="col-md-6 homesearchInputHolder">
-        <input type="text" name="searchquery" class="form-control" placeholder="E.g. Real Estate" />
+        <input type="text" name="searchquery" class="form-control" placeholder="E.g. Real Estate" required="required" />
       </div>
      <div class="col-md-2">
         <input type="text" class="form-control" placeholder="Locality" name="locality" />
