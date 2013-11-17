@@ -31,12 +31,19 @@
 		break;
 	}
 	$subCategory=$_REQUEST["sc"];
+	$getsub= mysql_query("SELECT text from categorymap WHERE subcategory='$subCategory'");
+	if(!$getsub){
+		echo mysql_error();
+	}
+	while ($subdata=mysql_fetch_array($getsub)){
+	
+		
 ?>
 <!DOCTYPE HTML>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>View Listing</title>
+<title><?php echo $subdata['text'];?></title>
 <link rel="stylesheet" href="css/bootstrap.min.css" />
 <style>
 	body{overflow-y:scroll;}
@@ -51,14 +58,16 @@
     <ol class="breadcrumb">
     	<li><a href="index.php">Home</a></li>
         <li><span style="text-transform:capitalize;"><?php echo $categoryName; ?></span></li>   
-        <li><?php echo $subCategory ?></li>
+        <li><?php echo $subdata['text'];?></li>
     </ol>
-<h3><?php echo $subCategory ?></h3>
+<h3 style="margin:30px 0px;"><?php echo $subdata['text'];?></h3>
+
 <?php
 	$query=mysql_query("SELECT * FROM data WHERE subcategory='$_REQUEST[sc]'");
 	if(mysql_num_rows($query)==0){
-		echo "<div class='panel panel-success'><div class='panel-heading'>No Results Found</div><div class='panel-body'>Sorry! We Coudn't Find Any Listing Matching To Your Requirement. Go back to <a href='index.php'>Homepage</a></div></div>";
+		echo "<div class='panel panel-danger'><div class='panel-heading'>No Results Found</div><div class='panel-body'>Sorry! We Coudn't Find Any Listing For <strong>".$subdata['text']."</strong>. Go back to <a href='index.php'>Homepage</a></div></div>";
 		die;
+	}
 	}
 ?>
 	<table border="1" width="100%" class="table table-hover table-bordered table-striped">
