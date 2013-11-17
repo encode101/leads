@@ -49,13 +49,14 @@
           <td>
           	<select class="form-control" name="category">
             	<option value="C1">Islamic</option>
+                <option value="C8">Matrimonials</option>
                 <option value="C2">Doctors</option>
                 <option value="C5">Education</option>
                 <option value="C3">Repair</option>
                 <option value="C4">Services</option>
                 <option value="C7">Shopping</option>
                 <option value="C6">Real Estate</option>
-                <option value="C8">Hotels</option>
+                <option value="C10">Hotels</option>
                 <option value="C9">Music</option>
             </select>
           </td>
@@ -178,6 +179,16 @@
             <option value="C7S11">Car old & new dealers</option>
             <option value="C7S12">Two wheelers dealers</option>
             <option value="C7S13">Bicycle Dealers </option>
+            </optgroup>
+            <optgroup label="Matrimonials">
+            	<option value="C8S1">Membership For Matrimonial</option>
+                <option value="C8S2">Wedding Halls</option>
+                <option value="C8S3">Caterers Services</option>
+                <option value="C8S4">Flowers Decorators</option>
+                <option value="C8S5">Dulhan & Dulha wear</option>
+                <option value="C8S6">Beauty Parlour</option>
+                <option value="C8S7">Mehndi Designer</option>
+                <option value="C8S8">Jewellery Showrooms</option>
             </optgroup>
            </select>
           </td>

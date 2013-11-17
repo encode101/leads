@@ -186,7 +186,18 @@
     <div class="element realestate"><a href="view.php?c=C6&sc=C6S16">Centering Works & Material</a></div>
     <div class="element realestate"><a href="view.php?c=C6&sc=C6S17">Bar Binding Works</a></div>
     <div class="element realestate"><a href="view.php?c=C6&sc=C6S18">Electrical & Lights fitting Dealers</a></div>
-  </div>
+
+	<!-- Matrimonial -->
+    
+    <div class="element matrimonials"><a href="view.php?c=C8&sc=C8S1">Membership For Matrimonial</a></div>
+    <div class="element matrimonials"><a href="view.php?c=C8&sc=C8S2">Wedding Halls</a></div>
+    <div class="element matrimonials"><a href="view.php?c=C8&sc=C8S3">Caterers Services</a></div>
+    <div class="element matrimonials"><a href="view.php?c=C8&sc=C8S4">Flowers Decorators</a></div>
+    <div class="element matrimonials"><a href="view.php?c=C8&sc=C8S5">Dulhan & Dulha wear</a></div>
+    <div class="element matrimonials"><a href="view.php?c=C8&sc=C8S6">Beauty Parlour</a></div>
+    <div class="element matrimonials"><a href="view.php?c=C8&sc=C8S7">Mehndi Designer</a></div>
+    <div class="element matrimonials"><a href="view.php?c=C8&sc=C8S8">Jewellery Showrooms</a></div>
+    </div>
 <div class="clearfix cus-hspacer-30"></div>
 </div>
 <script src="js/jquery-1.10.2.js"></script> 

@@ -29,7 +29,7 @@
 		$categoryName = "shopping";
 		break;
 		case "C8":
-		$categoryName = "hotels";
+		$categoryName = "Matrimonials";
 		break;
 		case "C9":
 		$categoryName = "Music";
@@ -40,6 +40,8 @@
 		echo mysql_error();
 	}
 	while ($subdata=mysql_fetch_array($getsub)){
+		$pageTitle= $subdata['text'];
+	}
 	
 		
 ?>
@@ -47,7 +49,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title><?php echo $subdata['text'];?></title>
+<title><?php echo $pageTitle;?></title>
 <link rel="stylesheet" href="css/bootstrap.min.css" />
 <style>
 	body{overflow-y:scroll;}
@@ -69,9 +71,9 @@
     <ol class="breadcrumb">
     	<li><a href="index.php">Home</a></li>
         <li><span style="text-transform:capitalize;"><span onClick="window.location.href = 'http://localhost/poc/tryouts/shuffle?src=<?php echo $categoryName; ?>'"><?php echo $categoryName; ?></span></span></li>   
-        <li><?php echo $subdata['text'];?></li>
+        <li><?php  echo $pageTitle;;?></li>
     </ol>
-<h3 style="margin:30px 0px;"><?php echo $subdata['text'];?></h3>
+<h3 style="margin:30px 0px;"><?php  echo $pageTitle;?></h3>
 
 <?php
 if(empty($_REQUEST["locality"])){
@@ -83,7 +85,6 @@ if(empty($_REQUEST["locality"])){
 	if(mysql_num_rows($query)==0){
 		echo "<div class='panel panel-danger'><div class='panel-heading'>No Results Found</div><div class='panel-body'>Sorry! We Coudn't Find Any Listing For <strong>".$subdata['text']."</strong>. Go back to <a href='index.php'>Homepage</a></div></div>";
 		die;
-	}
 	}
 ?>
 	<table border="1" width="100%" class="table table-hover table-bordered table-striped">
