@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 17, 2013 at 10:42 AM
+-- Generation Time: Nov 17, 2013 at 10:51 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -159,7 +159,7 @@ CREATE TABLE IF NOT EXISTS `data` (
   `city` varchar(255) NOT NULL,
   `phone` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
 
 --
 -- Dumping data for table `data`
@@ -170,7 +170,16 @@ INSERT INTO `data` (`id`, `company`, `name`, `email`, `mobile`, `address`, `cate
 (2, 'Raghav Industries Pvt Ltd.', 'Raghav Mishra', 'raghav.mishra@rgi.com', '9545600524', 'P1 605 Pentagon Towers Magarpatta City. Hadapsar.', 'C2', 'C2S9', 'We provide healthcare services & manufacture healthcare instruments.', 'Pune', '06576574494'),
 (3, 'Raghav Industries Pvt Ltd.', 'Raghav Mishra', 'raghav.mishra@rgi.com', '9545600524', 'P1 605 Pentagon Towers Magarpatta City. Hadapsar.', 'C2', 'C2S9', 'We provide healthcare services & manufacture healthcare instruments.', 'Pune', '06576574494'),
 (4, 'Raghav Industries Pvt Ltd.', 'Raghav Mishra', 'raghav.mishra@rgi.com', '9545600524', 'P1 605 Pentagon Towers Magarpatta City. Hadapsar.', 'C2', 'C2S9', 'We provide healthcare services & manufacture healthcare instruments.', 'Pune', '06576574494'),
-(5, 'Raghav Industries Pvt Ltd.', 'Raghav Mishra', 'raghav.mishra@rgi.com', '9545600524', 'P1 605 Pentagon Towers Magarpatta City. Hadapsar.', 'C2', 'C2S9', 'We provide healthcare services & manufacture healthcare instruments.', 'Pune', '06576574494');
+(5, 'Raghav Industries Pvt Ltd.', 'Raghav Mishra', 'raghav.mishra@rgi.com', '9545600524', 'P1 605 Pentagon Towers Magarpatta City. Hadapsar.', 'C2', 'C2S9', 'We provide healthcare services & manufacture healthcare instruments.', 'Pune', '06576574494'),
+(6, 'Raghav IT Training & Services Pvt Ltd.', 'Raghav Mishra', 'raghav.mishra@rgi.com', '9545600524', 'P1 605 Pentagon Towers Magarpatta City. Hadapsar.', 'C5', 'C5S4', 'We provide IT Training in PHP, .NET, JAVA. SAP.', 'Pune', '06576574494'),
+(7, 'Raghav IT Training & Services Pvt Ltd.', 'Raghav Mishra', 'raghav.mishra@rgi.com', '9545600524', 'P1 605 Pentagon Towers Magarpatta City. Hadapsar.', 'C5', 'C5S4', 'We provide IT Training in PHP, .NET, JAVA. SAP.', 'Pune', '06576574494'),
+(8, 'Raghav IT Training & Services Pvt Ltd.', 'Raghav Mishra', 'raghav.mishra@rgi.com', '9545600524', 'P1 605 Pentagon Towers Magarpatta City. Hadapsar.', 'C5', 'C5S4', 'We provide IT Training in PHP, .NET, JAVA. SAP.', 'Pune', '06576574494'),
+(9, 'Raghav IT Training & Services Pvt Ltd.', 'Raghav Mishra', 'raghav.mishra@rgi.com', '9545600524', 'P1 605 Pentagon Towers Magarpatta City. Hadapsar.', 'C5', 'C5S4', 'We provide IT Training in PHP, .NET, JAVA. SAP.', 'Pune', '06576574494'),
+(10, 'Raghav IT Training & Services Pvt Ltd.', 'Raghav Mishra', 'raghav.mishra@rgi.com', '9545600524', 'P1 605 Pentagon Towers Magarpatta City. Hadapsar.', 'C5', 'C5S3', 'We provide IT Training in PHP, .NET, JAVA. SAP.', 'Pune', '06576574494'),
+(11, 'Raghav IT Training & Services Pvt Ltd.', 'Raghav Mishra', 'raghav.mishra@rgi.com', '9545600524', 'P1 605 Pentagon Towers Magarpatta City. Hadapsar.', 'C5', 'C5S3', 'We provide IT Training in PHP, .NET, JAVA. SAP.', 'Pune', '06576574494'),
+(12, 'Raghav IT Training & Services Pvt Ltd.', 'Raghav Mishra', 'raghav.mishra@rgi.com', '9545600524', 'P1 605 Pentagon Towers Magarpatta City. Hadapsar.', 'C5', 'C5S3', 'We provide IT Training in PHP, .NET, JAVA. SAP.', 'Pune', '06576574494'),
+(13, 'Raghav IT Training & Services Pvt Ltd.', 'Raghav Mishra', 'raghav.mishra@rgi.com', '9545600524', 'P1 605 Pentagon Towers Magarpatta City. Hadapsar.', 'C5', 'C5S3', 'We provide IT Training in PHP, .NET, JAVA. SAP.', 'Pune', '06576574494'),
+(14, 'Raghav IT Training & Services Pvt Ltd.', 'Raghav Mishra', 'raghav.mishra@rgi.com', '9545600524', 'P1 605 Pentagon Towers Magarpatta City. Hadapsar.', 'C5', 'C5S3', 'We provide IT Training in PHP, .NET, JAVA. SAP.', 'Pune', '06576574494');
 
 -- --------------------------------------------------------
 

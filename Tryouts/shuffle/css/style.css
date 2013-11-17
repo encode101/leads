@@ -5,7 +5,7 @@ body{overflow-y:scroll;}
 .entryForm{width:400px!important;}
 
 #filters{display:none;}
-.searchPanel{margin:10px 0px; background:#F5F5F5; padding:20px 10px; border:1px solid #2a9f01; border-radius:5px;}
+.searchPanel{margin:10px 0px; background:#F5F5F5; padding:15px 10px 10px 10px; border:1px solid #2a9f01; border-radius:5px;}
 .searchPanel .form-control{border-color:#2a9f01;}
 .searchTitle{margin:0 0 20px 15px; font-size:20px; font-weight:bold; color:#2a9f01;}
 
