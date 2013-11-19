@@ -44,7 +44,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title><?php echo $subdata['text'];?></title>
+<title><?php echo $pageTitle;?></title>
 <link rel="stylesheet" href="css/bootstrap.min.css" />
 <style>
 	body{overflow-y:scroll;}

@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Untitled Document</title>
+<title>Admin Console : AmmiAbba</title>
 <link rel="stylesheet" href="css/bootstrap.css" />
 </head>
 
@@ -206,8 +206,8 @@
     <form action="uploadmp3.php" method="post" enctype="multipart/form-data" id="uploadmusic">
       <table class="table-bordered table-hover " cellpadding="10" width="100%">
       <tr>
-          <td>Track Description</td>
-          <td><input type="text" name="track_description" class="form-control" /> </td>
+          <td>Track Title</td>
+          <td><input type="text" name="track_title" class="form-control" /> </td>
         </tr>  
         <tr>
           <td>Select File</td>
@@ -215,7 +215,7 @@
         </tr>      
         <tr>
           <td></td>
-          <td><input type="submit" name="Upload" id="Upload" class="btn btn-primary" value="Upload Mp3 File" /><input type="hidden" name="MAX_FILE_SIZE" value="100000" /></td>
+          <td><input type="submit" name="Upload" id="Upload" class="btn btn-primary" value="Upload Mp3 File" /><input type="hidden" name="MAX_FILE_SIZE" value="99999999" /></td>
         </tr>
       </table>
 	</form>

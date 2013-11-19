@@ -1,3 +1,4 @@
+<?php include('dbconf.php'); ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -75,11 +76,16 @@
         <div class="blockTitle">Real Estate</div>
       </div>
     </div>
-    <div class="home hotels">
-      <div class="element block-hotels" id="hotels">
-        <div class="blockTitle">Hotels</div>
+     <div class="home services" id="services">
+      <div class="element block-services">
+        <div class="blockTitle">Services</div>
       </div>
     </div>
+    <!-- <div class="home hotels">
+      <div class="element block-hotels" id="hotels">
+        <div class="blockTitle">Hotels</div>
+      </div> 
+    </div> -->
     <div class="home music" id="music">
       <div class="element block-music">
         <div class="blockTitle">Music</div>
@@ -189,7 +195,7 @@
 
 	<!-- Matrimonial -->
     
-    <div class="element matrimonials"><a href="view.php?c=C8&sc=C8S1">Membership For Matrimonial</a></div>
+    <!-- <div class="element matrimonials"><a href="view.php?c=C8&sc=C8S1">Membership For Matrimonial</a></div> -->
     <div class="element matrimonials"><a href="view.php?c=C8&sc=C8S2">Wedding Halls</a></div>
     <div class="element matrimonials"><a href="view.php?c=C8&sc=C8S3">Caterers Services</a></div>
     <div class="element matrimonials"><a href="view.php?c=C8&sc=C8S4">Flowers Decorators</a></div>
@@ -197,6 +203,36 @@
     <div class="element matrimonials"><a href="view.php?c=C8&sc=C8S6">Beauty Parlour</a></div>
     <div class="element matrimonials"><a href="view.php?c=C8&sc=C8S7">Mehndi Designer</a></div>
     <div class="element matrimonials"><a href="view.php?c=C8&sc=C8S8">Jewellery Showrooms</a></div>
+    
+    <!-- Music -->
+    <?php
+    	$music=mysql_query("SELECT * FROM music");
+		while($row=mysql_fetch_array($music)){
+			echo '<div class="element music"><a href="uploads/music/'.$row['track_name'].'" download="uploads/music/'.$row['track_name'].'">'.$row[track_title].'</a></div>';
+		}
+	
+	?>
+    <!-- Services -->
+<div class="element services "><a href="view.php?c=C4&sc=C4S1 "> Ligal Advisor </a> </div>
+<div class="element services "><a href="view.php?c=C4&sc=C4S2 "> Courier Services </a> </div>
+<div class="element services "><a href="view.php?c=C4&sc=C4S3 "> Dry cleaners </a> </div>
+<div class="element services "><a href="view.php?c=C4&sc=C4S4 "> Duplicate Key Makers </a> </div>
+<div class="element services "><a href="view.php?c=C4&sc=C4S5 "> Gents & Ladies Tailors </a> </div>
+<div class="element services "><a href="view.php?c=C4&sc=C4S6 "> National & International Jobs </a> </div>
+<div class="element services "><a href="view.php?c=C4&sc=C4S7 "> Drycleaners & Laundry services </a> </div>
+<div class="element services "><a href="view.php?c=C4&sc=C4S8 "> Transporters </a> </div>
+<div class="element services "><a href="view.php?c=C4&sc=C4S9 "> Driving Schools </a> </div>
+<div class="element services "><a href="view.php?c=C4&sc=C4S10 "> Charted Accountant </a> </div>
+<div class="element services "><a href="view.php?c=C4&sc=C4S11 "> Pest Control Services </a> </div>
+<div class="element services "><a href="view.php?c=C4&sc=C4S12 "> Hajj & umhar organizers </a> </div>
+<div class="element services "><a href="view.php?c=C4&sc=C4S13 "> Air Ticketing & Immigration </a> </div>
+<div class="element services "><a href="view.php?c=C4&sc=C4S14 "> Bus Services </a> </div>
+<div class="element services "><a href="view.php?c=C4&sc=C4S15 "> Car Hire </a> </div>
+<div class="element services "><a href="view.php?c=C4&sc=C4S16 "> Hotel Reservation </a> </div>
+<div class="element services "><a href="view.php?c=C4&sc=C4S17 "> Railway Ticketing Agents </a> </div>
+<div class="element services "><a href="view.php?c=C4&sc=C4S18 "> Hotels & Lodging (Local & Outstation ) </a> </div>
+<div class="element services "><a href="view.php?c=C4&sc=C4S19 ">  food Restaurants (Local & Outstation ) </a> </div>
+
     </div>
 <div class="clearfix cus-hspacer-30"></div>
 </div>

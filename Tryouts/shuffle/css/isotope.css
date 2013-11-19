@@ -83,5 +83,6 @@
 .block-realestate{background:url(../images/block-realestate.png) no-repeat right bottom; background-size:100% auto;}
 .block-hotels{background:url(../images/block-hotels.png) no-repeat right bottom; background-size:100% auto;}
 .block-music{background:url(../images/block-music.png) no-repeat right bottom; background-size:100% auto;}
+.block-services{background:url(../images/block-services.png) no-repeat right bottom; background-size:100% auto;}
 .blockTitle{background:#390; opacity:0.7; color:#FFF; margin:40% 0 0 0; padding:5px 15px;  font-size:16px; text-shadow:0 1px #000;}
 .element:hover .blockTitle{background:#c30101;opacity:0.9;}

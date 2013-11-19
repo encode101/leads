@@ -79,6 +79,13 @@ jQuery(function($){
 	  $("#topMenu-home").parent().addClass("active");
 	  return false;
 	});
+	$("#services, #topMenu-services").click(function(){
+	  var selector = '.services';
+	  $container.isotope({ filter: selector });
+	  $("#topMenu li").removeClass("active");
+	  $("#topMenu-services").parent().addClass("active");
+	  return false;
+	});
 	
 	// End Of Script
 	
