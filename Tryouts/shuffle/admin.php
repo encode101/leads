@@ -8,7 +8,7 @@
 
 <body>
 <div style="margin:20px 0 0 0; margin:20px;">
-    <div clas="entryForm" style="width:500px;">
+    <div clas="entryForm" style="width:500px; float:left">
     <h3>Enter Data To Any Category</h3>
     <form action="" id="dataentry">
       <table class="table-bordered table-hover " cellpadding="10" width="100%">
@@ -196,6 +196,22 @@
         <tr>
           <td></td>
           <td><input type="submit" class="btn btn-primary" value="Submit Form" /></td>
+        </tr>
+      </table>
+	</form>
+    </div>
+	<!-- Music Upload Form -->
+    <div clas="entryForm" style="width:500px; float:left; margin:0 0 0 50px;">
+    <h3>Music Category</h3>
+    <form action="" method="POST" enctype="multipart/form-data" id="uploadmusic">
+      <table class="table-bordered table-hover " cellpadding="10" width="100%">
+        <tr>
+          <td>Select File</td>
+          <td><input type="file" name="filefield" id="filefield" class="btn btn-success" /> </td>
+        </tr>      
+        <tr>
+          <td></td>
+          <td><input type="submit" name="Upload" id="Upload" class="btn btn-primary" value="Upload Mp3 File" /><input type="hidden" name="MAX_FILE_SIZE" value="100000" /></td>
         </tr>
       </table>
 	</form>
