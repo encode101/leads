@@ -11,16 +11,17 @@ jQuery(function($){
 		event.preventDefault();
 	})
 	
-	$("#uploadmusic").submit(function(event){
+	/* $("#uploadmusic").submit(function(event){
 		var data = $("#uploadmusic").serialize();
 		console.log(data);
 		$.ajax({
 			url:"uploadmp3.php",
+			method:"post",
 			data: data,
 			success:function(data){
 				console.log("Response : "+data);
 			}
 		});
 		event.preventDefault();
-	})
+	}) */
 })

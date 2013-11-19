@@ -203,8 +203,12 @@
 	<!-- Music Upload Form -->
     <div clas="entryForm" style="width:500px; float:left; margin:0 0 0 50px;">
     <h3>Music Category</h3>
-    <form action="" method="POST" enctype="multipart/form-data" id="uploadmusic">
+    <form action="uploadmp3.php" method="post" enctype="multipart/form-data" id="uploadmusic">
       <table class="table-bordered table-hover " cellpadding="10" width="100%">
+      <tr>
+          <td>Track Description</td>
+          <td><input type="text" name="track_description" class="form-control" /> </td>
+        </tr>  
         <tr>
           <td>Select File</td>
           <td><input type="file" name="filefield" id="filefield" class="btn btn-success" /> </td>
