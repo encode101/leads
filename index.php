@@ -1,23 +1,24 @@
-<!DOCTYPE html>
+<?php include('dbconf.php'); ?>
+<!DOCTYPE HTML>
 <html>
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
 <title>AmmiAbba</title>
 <link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/isotope.css" />
 <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-<div class="wrapper col-md-10 col-md-offset-1">
-  <div class="page-header">
-    <div class="branding pull-left"><a href="index.php"><img src="images/ammiabba.png" width="199" height="32" alt="AmmiAbba" /></a></div>
-    <div class="customer-care pull-right"><img src="images/customer-care.png" width="255" height="42" alt="Customer Care: 9886406573" /></div>
-    <div class="clearfix"></div>
-  </div>
+<div class="container">
+  <?php include('header.php') ?>  
+  <?php include('top-menu.php') ?> 
+  <div class="clearfix">&nbsp;</div>
+  
+  <!-- Search Panel -->
+  
   <div class="searchPanel col-md-12">
-    <p class="searchTitle"> For all your Local Needs in Bangalore.</p>
-    <form id="homeSearch">
+    <form id="homeSearch" action="searchengine.php" method="post">
       <div class="col-md-2">
         <select name="city" class="form-control">
           <option disabled="disabled">Please Select A City</option>
@@ -26,12 +27,12 @@
           <option value="pune">Pune</option>
         </select>
       </div>
-      <div class="col-md-8 homesearchInputHolder">
-        <input type="text" class="form-control" placeholder="E.g. Real Estate" />
+      <div class="col-md-6 homesearchInputHolder">
+        <input type="text" name="searchquery" class="form-control" placeholder="E.g. Real Estate" required="required" />
       </div>
-      <!-- <div class="col-md-3">
-        <input type="text" class="form-control" placeholder="Locality" />
-      </div> -->
+     <div class="col-md-2">
+        <input type="text" class="form-control" placeholder="Locality" name="locality" />
+      </div>
       <div class="col-md-2">
         <input type="submit" class="btn btn-success" value="Search" />
       </div>
@@ -39,87 +40,216 @@
     <div class="clearfix"></div>
   </div>
   <div class="clearfix"></div>
-  <!-- Bottom Panel -->
-  <div class="services" id="ajaxified-data">
-    <div class="col-md-3 col-sm-3">
+  <div id="ajaxified-data">
+    <div class="home islamic" id="islamic">
       <div class="element block-islamic">
         <div class="blockTitle">Islamic</div>
       </div>
     </div>
-    <div class="col-md-3 col-sm-3" id="matrimony">
+    <div class="home matrimonials" id="matrimonials">
       <div class="element block-matrimonial">
         <div class="blockTitle">Matrimonial</div>
       </div>
-	</div>
-    <div class="col-md-3 col-sm-3">
+    </div>
+    <div class="home doctors" id="doctors">
       <div class="element block-doctors">
         <div class="blockTitle">Doctors</div>
       </div>
     </div>
-    <div class="col-md-3 col-sm-3">
+    <div class="home education" id="education">
       <div class="element block-education">
-      	<div class="blockTitle">Education</div>
+        <div class="blockTitle">Education</div>
       </div>
     </div>
-    <div class="clearfix cus-hspacer-30">&nbsp;</div>
-    <div class="col-md-3 col-sm-3">
+    <div class="home repairs" id="repairs">
       <div class="element block-repair">
         <div class="blockTitle">Repair</div>
       </div>
     </div>
-    <div class="col-md-3 col-sm-3">
+    <div class="home shopping" id="shopping">
       <div class="element block-shopping">
-      	<div class="blockTitle">Shopping</div>
+        <div class="blockTitle">Shopping</div>
       </div>
     </div>
-    <div class="col-md-3 col-sm-3" id="realestate">
+    <div class="home realestate" id="realestate">
       <div class="element block-realestate">
-      	<div class="blockTitle">Real Estate</div>
+        <div class="blockTitle">Real Estate</div>
       </div>
     </div>
-    <div class="col-md-3 col-sm-3">
-      <div class="element block-hotels">
-      	<div class="blockTitle">Hotels</div>
+     <div class="home services" id="services">
+      <div class="element block-services">
+        <div class="blockTitle">Services</div>
       </div>
     </div>
-    <div class="clearfix cus-hspacer-30">&nbsp;</div>
-    <div class="col-md-3 col-sm-3">
+    <!-- <div class="home hotels">
+      <div class="element block-hotels" id="hotels">
+        <div class="blockTitle">Hotels</div>
+      </div> 
+    </div> -->
+    <!-- <div class="home music" id="music">
       <div class="element block-music">
-      	<div class="blockTitle">Music</div>
+        <div class="blockTitle">Music</div>
       </div>
+    </div> -->
+    
+    <!-- Shopping Sub Category -->
+    
+    <div class="element shopping"><a href="view.php?c=C7&sc=C7S1">Gents Shopping</a></div>
+    <div class="element shopping"><a href="view.php?c=C7&sc=C7S2">Ladies shopping </a></div>
+    <div class="element shopping"><a href="view.php?c=C7&sc=C7S3">Kids Shopping</a></div>
+    <div class="element shopping"><a href="view.php?c=C7&sc=C7S4">Watch Dealers</a></div>
+    <div class="element shopping"><a href="view.php?c=C7&sc=C7S5">Departmental Stores</a></div>
+    <div class="element shopping"><a href="view.php?c=C7&sc=C7S6">Home Appliances</a></div>
+    <div class="element shopping"><a href="view.php?c=C7&sc=C7S7">Book Stores</a></div>
+    <div class="element shopping"><a href="view.php?c=C7&sc=C7S8">Jewellery Showrooms</a></div>
+    <div class="element shopping"><a href="view.php?c=C7&sc=C7S9">Gift Shops</a></div>
+    <div class="element shopping"><a href="view.php?c=C7&sc=C7S10">Fashion Designers</a></div>
+    <div class="element shopping"><a href="view.php?c=C7&sc=C7S11">Car old & new dealers</a></div>
+    <div class="element shopping"><a href="view.php?c=C7&sc=C7S12">Two wheelers dealers</a></div>
+    <div class="element shopping"><a href="view.php?c=C7&sc=C7S13">Bicycle Dealers</a></div>
+    
+    <!-- Doctors Sub Category-->
+    
+    <div class="element doctors"><a href="view.php?c=C2&sc=C2S1">Dentists</a></div>
+    <div class="element doctors"><a href="view.php?c=C2&sc=C2S2">Dermatologists</a></div>
+    <div class="element doctors"><a href="view.php?c=C2&sc=C2S3">Gynecologist & pediatricians</a></div>
+    <div class="element doctors"><a href="view.php?c=C2&sc=C2S4">Psychiatrists</a></div>
+    <div class="element doctors"><a href="view.php?c=C2&sc=C2S5">Cardiologist</a></div>
+    <div class="element doctors"><a href="view.php?c=C2&sc=C2S6">Diabetologist</a></div>
+    <div class="element doctors"><a href="view.php?c=C2&sc=C2S7">General Physician</a></div>
+    <div class="element doctors"><a href="view.php?c=C2&sc=C2S8">Orthopedic</a></div>
+    <div class="element doctors"><a href="view.php?c=C2&sc=C2S9">Hospitals and Nursing home</a></div>
+    <div class="element doctors"><a href="view.php?c=C2&sc=C2S10">Medical Tourism</a></div>
+    <div class="element doctors"><a href="view.php?c=C2&sc=C2S11">Neurosurgeons</a></div>
+    <div class="element doctors"><a href="view.php?c=C2&sc=C2S12">Sexologist</a></div>
+    <div class="element doctors"><a href="view.php?c=C2&sc=C2S13">Thyroid</a></div>
+    <div class="element doctors"><a href="view.php?c=C2&sc=C2S14">Urologists</a></div>
+    <div class="element doctors"><a href="view.php?c=C2&sc=C2S15">Veterinary</a></div>
+    <div class="element doctors"><a href="view.php?c=C2&sc=C2S16">Homeopathic</a></div>
+    <div class="element doctors"><a href="view.php?c=C2&sc=C2S17">Unani</a></div>
+    <div class="element doctors"><a href="view.php?c=C2&sc=C2S18">Ent</a></div>
+    <div class="element doctors"><a href="view.php?c=C2&sc=C2S19">Ayurvadic</a></div>
+    <div class="element doctors"><a href="view.php?c=C2&sc=C2S20">Chemists</a></div>
+    <div class="element doctors"><a href="view.php?c=C2&sc=C2S21">Lab & Research</a></div>
+    <div class="element doctors"><a href="view.php?c=C2&sc=C2S22">Medical Equipments</a></div>
+    
+    <!-- Education -->
+    
+    <div class="element education "><a href="view.php?c=C5&sc=C5S1 "> Schools & Tuitions </a></div>
+    <div class="element education "><a href="view.php?c=C5&sc=C5S2 "> Collage & Tuitions </a></div>
+    <div class="element education "><a href="view.php?c=C5&sc=C5S3 "> Professional Collages & Tuitions </a></div>
+    <div class="element education "><a href="view.php?c=C5&sc=C5S4 "> Job oriental courses </a></div>
+    <div class="element education "><a href="view.php?c=C5&sc=C5S5 "> Degree Collages </a></div>
+    <div class="element education "><a href="view.php?c=C5&sc=C5S6 "> Boarding Schools </a></div>
+    <div class="element education "><a href="view.php?c=C5&sc=C5S7 "> Teacher training Colleges </a></div>
+    <div class="element education "><a href="view.php?c=C5&sc=C5S8 "> International Schools </a></div>
+    <div class="element education "><a href="view.php?c=C5&sc=C5S9 "> Arabic Schools </a></div>
+    
+    <!-- Islamic -->
+    
+    <div class="element islamic"><a href="view.php?c=C1&sc=C1S1">Bayans & Kirath </a></div>
+    <div class="element islamic"><a href="view.php?c=C1&sc=C1S2">Azan</a></div>
+    <div class="element islamic"><a href="view.php?c=C1&sc=C1S3">Hajj & Umara tours organisers </a></div>
+    <div class="element islamic"><a href="view.php?c=C1&sc=C1S4">Madras a & Arabic schools</a></div>
+    <div class="element islamic"><a href="view.php?c=C1&sc=C1S5">Baitulmals</a></div>
+    <div class="element islamic"><a href="view.php?c=C1&sc=C1S6">Govt schemes for Muslim</a></div>
+    <div class="element islamic"><a href="view.php?c=C1&sc=C1S7">Jobs for imam & mauzin</a></div>
+    <div class="element islamic"><a href="view.php?c=C1&sc=C1S8">List of social organization</a></div>
+    <div class="element islamic"><a href="view.php?c=C1&sc=C1S9"> dargha of India</a></div>
+    
+    <!-- Repairs -->
+    
+    <div class="element repairs"><a href="view.php?c=C3&sc=C3S1">Car </a></div>
+    <div class="element repairs"><a href="view.php?c=C3&sc=C3S2">Motorcycle</a></div>
+    <div class="element repairs"><a href="view.php?c=C3&sc=C3S3">Mobile Phone</a></div>
+    <div class="element repairs"><a href="view.php?c=C3&sc=C3S4">Computers</a></div>
+    <div class="element repairs"><a href="view.php?c=C3&sc=C3S5">Fan</a></div>
+    <div class="element repairs"><a href="view.php?c=C3&sc=C3S6">Microwave Oven</a></div>
+    <div class="element repairs"><a href="view.php?c=C3&sc=C3S7">Refrigerator</a></div>
+    <div class="element repairs"><a href="view.php?c=C3&sc=C3S8">Television</a></div>
+    <div class="element repairs"><a href="view.php?c=C3&sc=C3S9">Washing Machin</a></div>
+    <div class="element repairs"><a href="view.php?c=C3&sc=C3S10">Moter winding</a></div>
+    <div class="element repairs"><a href="view.php?c=C3&sc=C3S11">AC , Mixer Grinders</a></div>
+    <div class="element repairs"><a href="view.php?c=C3&sc=C3S12">Others</a></div>
+    
+    <!-- Real Estate -->
+    
+    <div class="element realestate"><a href="view.php?c=C6&sc=C6S1">Builders & Developers</a></div>
+    <div class="element realestate"><a href="view.php?c=C6&sc=C6S2">Real Estate Agents</a></div>
+    <div class="element realestate"><a href="view.php?c=C6&sc=C6S3">Men & women PG</a></div>
+    <div class="element realestate"><a href="view.php?c=C6&sc=C6S4">Building Material Suppliers</a></div>
+    <div class="element realestate"><a href="view.php?c=C6&sc=C6S5">Engineering Works</a></div>
+    <div class="element realestate"><a href="view.php?c=C6&sc=C6S6">Carpenter Services</a></div>
+    <div class="element realestate"><a href="view.php?c=C6&sc=C6S7">Electricians Services</a></div>
+    <div class="element realestate"><a href="view.php?c=C6&sc=C6S8">Painting Services</a></div>
+    <div class="element realestate"><a href="view.php?c=C6&sc=C6S9">Plumbing Services </a></div>
+    <div class="element realestate"><a href="view.php?c=C6&sc=C6S10">Interior Designers</a></div>
+    <div class="element realestate"><a href="view.php?c=C6&sc=C6S11">Flooring Contractors</a></div>
+    <div class="element realestate"><a href="view.php?c=C6&sc=C6S12">Mason Contractors</a></div>
+    <div class="element realestate"><a href="view.php?c=C6&sc=C6S13">Home Décor Dealers</a></div>
+    <div class="element realestate"><a href="view.php?c=C6&sc=C6S14">Paints and Hardware</a></div>
+    <div class="element realestate"><a href="view.php?c=C6&sc=C6S15">Granite ,Marble & Tiles</a></div>
+    <div class="element realestate"><a href="view.php?c=C6&sc=C6S16">Centering Works & Material</a></div>
+    <div class="element realestate"><a href="view.php?c=C6&sc=C6S17">Bar Binding Works</a></div>
+    <div class="element realestate"><a href="view.php?c=C6&sc=C6S18">Electrical & Lights fitting Dealers</a></div>
+
+	<!-- Matrimonial -->
+    
+    <!-- <div class="element matrimonials"><a href="view.php?c=C8&sc=C8S1">Membership For Matrimonial</a></div> -->
+    <div class="element matrimonials"><a href="view.php?c=C8&sc=C8S2">Wedding Halls</a></div>
+    <div class="element matrimonials"><a href="view.php?c=C8&sc=C8S3">Caterers Services</a></div>
+    <div class="element matrimonials"><a href="view.php?c=C8&sc=C8S4">Flowers Decorators</a></div>
+    <div class="element matrimonials"><a href="view.php?c=C8&sc=C8S5">Dulhan & Dulha wear</a></div>
+    <div class="element matrimonials"><a href="view.php?c=C8&sc=C8S6">Beauty Parlour</a></div>
+    <div class="element matrimonials"><a href="view.php?c=C8&sc=C8S7">Mehndi Designer</a></div>
+    <div class="element matrimonials"><a href="view.php?c=C8&sc=C8S8">Jewellery Showrooms</a></div>
+    
+    <!-- Music -->
+    <?php
+    	$music=mysql_query("SELECT * FROM music");
+		while($row=mysql_fetch_array($music)){
+			echo '<div class="element music"><a href="uploads/music/'.$row['track_name'].'" download="uploads/music/'.$row['track_name'].'">'.$row[track_title].'</a></div>';
+		}
+	
+	?>
+    <!-- Services -->
+<div class="element services "><a href="view.php?c=C4&sc=C4S1 "> Ligal Advisor </a> </div>
+<div class="element services "><a href="view.php?c=C4&sc=C4S2 "> Courier Services </a> </div>
+<div class="element services "><a href="view.php?c=C4&sc=C4S3 "> Dry cleaners </a> </div>
+<div class="element services "><a href="view.php?c=C4&sc=C4S4 "> Duplicate Key Makers </a> </div>
+<div class="element services "><a href="view.php?c=C4&sc=C4S5 "> Gents & Ladies Tailors </a> </div>
+<div class="element services "><a href="view.php?c=C4&sc=C4S6 "> National & International Jobs </a> </div>
+<div class="element services "><a href="view.php?c=C4&sc=C4S7 "> Drycleaners & Laundry services </a> </div>
+<div class="element services "><a href="view.php?c=C4&sc=C4S8 "> Transporters </a> </div>
+<div class="element services "><a href="view.php?c=C4&sc=C4S9 "> Driving Schools </a> </div>
+<div class="element services "><a href="view.php?c=C4&sc=C4S10 "> Charted Accountant </a> </div>
+<div class="element services "><a href="view.php?c=C4&sc=C4S11 "> Pest Control Services </a> </div>
+<div class="element services "><a href="view.php?c=C4&sc=C4S12 "> Hajj & umhar organizers </a> </div>
+<div class="element services "><a href="view.php?c=C4&sc=C4S13 "> Air Ticketing & Immigration </a> </div>
+<div class="element services "><a href="view.php?c=C4&sc=C4S14 "> Bus Services </a> </div>
+<div class="element services "><a href="view.php?c=C4&sc=C4S15 "> Car Hire </a> </div>
+<div class="element services "><a href="view.php?c=C4&sc=C4S16 "> Hotel Reservation </a> </div>
+<div class="element services "><a href="view.php?c=C4&sc=C4S17 "> Railway Ticketing Agents </a> </div>
+<div class="element services "><a href="view.php?c=C4&sc=C4S18 "> Hotels & Lodging (Local & Outstation ) </a> </div>
+<div class="element services "><a href="view.php?c=C4&sc=C4S19 ">  food Restaurants (Local & Outstation ) </a> </div>
+
     </div>
-    <div class="clearfix"></div>
-  </div>
-  <div class="clearfix cus-hspacer-25"></div>
+<div class="clearfix cus-hspacer-30"></div>
 </div>
-<div class="clearfix cus-hspacer-25"></div>
-<div class="footer"> &copy; Copyright 2013. All Rights Reserved. View <a href="disclaimer.php">Disclaimer</a> </div>
-<div class="clearfix cus-hspacer-25"></div>
-</div>
-
-<!-- Generic Modal -->
-
-<div class="modal fade" id="profilePic" tabindex="-1" role="dialog" aria-labelledby="profilePic" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Profile Picture</h4>
-      </div>
-      <div class="modal-body">
-       <div id="profilePicHolder">
-   	   </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
 <script src="js/jquery-1.10.2.js"></script> 
-<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/jquery.isotope.min.js"></script> 
 <script src="js/typeahead.min.js"></script> 
-<script src="js/script.js"></script>
+<?php /*
+	if(isset($_REQUEST['src'])){
+	?>
+    <script>
+    	 $('#ajaxified-data').isotope({filter: '<?php echo $_REQUEST['src']; ?>'});
+    </script>
+    <?php
+	}*/
+?>
+<script src="js/shuffle.js"></script> 
+<script src="js/main.js"></script>
 </body>
 </html>
