@@ -196,6 +196,7 @@
 	<!-- Matrimonial -->
     
     <!-- <div class="element matrimonials"><a href="view.php?c=C8&sc=C8S1">Membership For Matrimonial</a></div> -->
+    <div class="element matrimonials"><a href="matrimonial-listing.php">Madavat</a></div>
     <div class="element matrimonials"><a href="view.php?c=C8&sc=C8S2">Wedding Halls</a></div>
     <div class="element matrimonials"><a href="view.php?c=C8&sc=C8S3">Caterers Services</a></div>
     <div class="element matrimonials"><a href="view.php?c=C8&sc=C8S4">Flowers Decorators</a></div>
