@@ -68,7 +68,7 @@
 .motherBlock{height:200px; width:400px; border:1px solid #CCC; margin:0 30px 30px 0;}
 .home .element{width:250px; height:150px; margin:20px 20px 0px 0; border:1px solid #2A9F01; text-align:center; border-radius:4px; padding:0px;}
 .element{width:250px; margin:20px 20px 0px 0; border:1px solid #2A9F01; padding:0px; text-align:center; border-radius:4px; padding:15px 10px; cursor:pointer; background:#FFF;}
-.element:hover{box-shadow:0 0 10px 0px #CCC; border:1px solid #DDD;}
+.element:hover{box-shadow:0 0 10px 0px #CCC; border:1px solid #030;}
 #filters{margin:30px 0; padding:0px;}
 #filters li{float:left; margin:0 10px; list-style:none;}
 

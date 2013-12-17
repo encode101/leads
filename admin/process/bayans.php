@@ -1,37 +1,8 @@
 <?php 
-	include('dbconf.php');
+	include('../../dbconf.php');
 	$categoryName=$_REQUEST["c"];
-	switch($categoryName){
-		case "C1":
-		$categoryName = "islamic";
-		break;
-		case "C2":
-		$categoryName = "doctors";
-		break;
-		case "C3":
-		$categoryName = "repairs";
-		break;
-		case "C4":
-		$categoryName = "services";
-		break;
-		case "C5":
-		$categoryName = "education";
-		break;
-		case "C6":
-		$categoryName = "realestate";
-		break;
-		case "C7":
-		$categoryName = "shopping";
-		break;
-		case "C8":
-		$categoryName = "hotels";
-		break;
-		case "C9":
-		$categoryName = "Music";
-		break;
-	}
 	$subCategory=$_REQUEST["sc"];
-	$getsub= mysql_query("SELECT text from categorymap WHERE subcategory='$subCategory'");
+	$getsub= mysql_query("SELECT text from bayans");
 	if(!$getsub){
 		echo mysql_error();
 	}
@@ -46,7 +17,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title><?php echo $pageTitle;?></title>
 <link rel="stylesheet" href="css/bootstrap.min.css" />
-<link rel="stylesheet" href="css/style.css" />
 <style>
 body {
 	overflow-y:scroll;
@@ -99,13 +69,14 @@ body {
 <body>
 <div class="container">
   <?php include('header.php') ?>
+  <div class="clearfix">&nbsp;</div>
   <div class="clearfix"></div>
   <ol class="breadcrumb">
     <li><a href="index.php">Home</a></li>
     <li><span style="text-transform:capitalize;"><?php echo $categoryName; ?></span></li>
     <li><?php echo $pageTitle ?></li>
   </ol>
-  <h3 style="margin:0px 0 0 10px;">
+  <h3 style="margin:30px 0px;">
     <?php  echo $pageTitle?>
   </h3>
   <hr/>

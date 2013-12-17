@@ -1,11 +1,10 @@
 <?php 
 	include('dbconf.php');
-	$matrimony= mysql_query("SELECT * from data WHERE subcategory='madavat'");
+	$matrimony= mysql_query("SELECT * from data WHERE subcategory='C8S9'");
 	if(!$matrimony){
 		echo mysql_error();
-	}
-	
-		
+		die;
+	}			
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -23,77 +22,61 @@ body {
 	/* border-top:1px solid #6699CC; */
 	box-shadow:0 0 10px 0px #CCC;
 }
-.leftNavElement {
-	margin:10px 0px;
-}
-.subTitle {
-	font-weight:normal;
-	font-size:15px;
-	background:#F5F5F5;
-	color:#000;
-	padding:5px 10px;
-}
-.companyImage {
-	height:150px;
-	width:150px;
-	margin:10px auto;
-	padding:40px 0 0 0;
-}
-.companyImage img {
-	max-height:150px;
-	max-width:150px;
-	border-radius:4px;
-	display:block;
-	margin:0 auto;
-}
-.cdetails {
-	margin:10px 0px;
-	padding:0px 0px;
-}
-.cdetails li {
-	list-style:none;
-	padding:0px 0 2px 10px;
-	line-height:20px;
-}
-.cdetails img {
-	margin:0 20px 0 0px;
-}
+.profileImage{max-width:150px; float:right; display:block; margin:50px 30px 0 0; border:4px solid #FFF; box-shadow:0 0 10px 5px #CCC; border-radius:5px;}
+.profinfo{list-style:none; margin:50px auto; text-align:center; border-top:1px dashed #CCC; border-bottom:1px dashed #CCC; padding:20px 0; width:90%}
+.profinfo li{text-align:center;}
 </style>
+<link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
 <div class="container">
   <?php include('header.php') ?>
-  <div class="clearfix">&nbsp;</div>
-  <div class="clearfix"></div>
-  <h3>Madavat</h3>
-  <div class="col-md-2" id="leftcol">
-    <div class="dropdown">
-  	<button class="btn dropdown-toggle sr-only" type="button" id="dropdownMenu1" data-toggle="dropdown">
-    Dropdown
-    <span class="caret"></span>
-  	</button>
-  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
-    <li role="presentation" class="divider"></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
-  </ul>
-</div>
-
-  </div>
-  <div class="col-md-10" style="padding:0 0 0 0px;">
+   <ol class="breadcrumb">
+    <li><a href="index.php">Home</a></li>
+    <li><span style="text-transform:capitalize;">Madavat</span></li>
+  </ol>
+  <h3  style="margin:0px 0px 30px 0px;">Madavat</h3>
+  <div class="col-md-12" style="padding:0 0 0 0px;">
+  
     <?php
 	if(mysql_num_rows($matrimony)==0){
 		echo "<div class='panel panel-danger'><div class='panel-heading'>No Results Found</div><div class='panel-body'>Sorry! We Coudn't Find Any Listing. Go back to <a href='index.php'>Homepage</a></div></div>";
 		die;
 	}
-
-	while($row=mysql_fetch_array($matrimony)){
-		echo("<tr><td>".$row['name']."</td></tr>");
+	else{
+		while($row = mysql_fetch_array($matrimony)){
+			echo ("<div class='listElement' style='border-top:5px solid #339900'><table class='table table-bordered'>");
+			echo("<tr><td width='300'>Name</td><td>".$row['name']."</td>
+			<td rowspan='15' width='250'><img class='profileImage' src='uploads/profiles/".$row['image']."' align='middle' alt='".$row['name']."'>
+			<div class='clearfix'></div>
+				<ul class='profinfo'>
+					<li><strong>".$row['name']."</strong></li>
+					<li><em>".$row['profession']."</em></li>
+				</ul>
+			</td>
+			
+			</tr>");
+			echo("<tr><td>Gender</td><td>".$row['gender']."</td></tr>");
+			echo("<tr><td>Father's Name</td><td>".$row['father_name']."</td></tr>");
+			echo("<tr><td>Mother's Name</td><td>".$row['mother_name']."</td></tr>");
+			echo("<tr><td>DOB</td><td>".$row['dob']."</td></tr>");
+			echo("<tr><td>Educational Qualification</td><td>".$row['edu_qual']."</td></tr>");
+			echo("<tr><td>Height</td><td>".$row['height']."</td></tr>");
+			echo("<tr><td>Complexion</td><td>".$row['complexion']."</td></tr>");
+			echo("<tr><td>Profession</td><td>".$row['profession']."</td></tr>");
+			echo("<tr><td>Salary</td><td>".$row['salary']."</td></tr>");
+			echo("<tr><td>Email</td><td>".$row['email']."</td></tr>");
+			echo("<tr><td>Address</td><td>".$row['address']."</td></tr>");
+			echo("<tr><td>City</td><td>".$row['city']."</td></tr>");
+			echo("<tr><td>Landline Number</td><td>".$row['phone']."</td></tr>");
+			echo("<tr><td>Mobile</td><td>".$row['mobile']."</td></tr>");
+			echo("<tr><td>Ammiabba Co-ordinator</td><td>".$row['coordinator']."</td></tr>");
+			echo("</table></div>");
+		}
 	}
 	 ?>
+     
   </div>
 </div>
 </body>

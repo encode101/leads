@@ -1,8 +1,8 @@
 <?php 
-	include('../dbconf.php');	
+	include('../../dbconf.php');	
 	if(isset($_FILES['companyimg'])){
 		$file=$_FILES['companyimg'];
-		$upload_directory='../uploads/profiles/';
+		$upload_directory='../../uploads/profiles/';
 		$ext_str = "gif,png,jpg,jpeg,mp3,tiff,bmp,doc,docx,ppt,pptx,txt,pdf";
 		$allowed_extensions=explode(',',$ext_str);
 		//$max_file_size = 99999999;	//10 mb remember 1024bytes =1kbytes /* check allowed extensions here */
@@ -26,7 +26,9 @@
 		}
 		
 		else{
+			echo mysql_error();
 			echo "The Uploaded file was not moved to target directory."; //file can't moved with unknown reasons likr cleaning of server temperory files cleaning
+			
 		}
 		echo " Done";
 	}; 

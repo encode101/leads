@@ -1,7 +1,7 @@
 // JavaScript Document
 
 jQuery(function($){
-	$("#dataentry").submit(function(event){
+	/* $("#dataentry").submit(function(event){
 		var data = $("#dataentry").serialize();
 		$.ajax({
 			url:"adminprocess.php",

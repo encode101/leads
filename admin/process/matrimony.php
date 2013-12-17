@@ -1,8 +1,8 @@
 <?php 
-	include('../dbconf.php');	
+	include('../../dbconf.php');	
 	if(isset($_FILES['companyimg'])){
 		$file=$_FILES['companyimg'];
-		$upload_directory='../uploads/profiles/';
+		$upload_directory='../../uploads/profiles/';
 		$ext_str = "gif,png,jpg,jpeg,mp3,tiff,bmp,doc,docx,ppt,pptx,txt,pdf";
 		$allowed_extensions=explode(',',$ext_str);
 		//$max_file_size = 99999999;	//10 mb remember 1024bytes =1kbytes /* check allowed extensions here */
@@ -15,8 +15,26 @@
 		$path=md5(microtime()).'.'.$ext;
 		
 		if(move_uploaded_file($file['tmp_name'],$upload_directory.$path)){
-			//mysql_query("INSERT INTO data(track_name) VALUES ('$path')");
-			$query = mysql_query("INSERT INTO data(company, name, email, mobile, phone, address, category, subcategory, description, city,image) VALUES ('$_REQUEST[company]','$_REQUEST[name]','$_REQUEST[email]','$_REQUEST[mobile]','$_REQUEST[phone]','$_REQUEST[address]','$_REQUEST[category]','$_REQUEST[subcategory]','$_REQUEST[description]','$_REQUEST[city]','$path')");
+$query = mysql_query("INSERT INTO data(name, gender, father_name, mother_name, dob, edu_qual, height, complexion, profession, salary, coordinator, email, mobile, phone, address, category, subcategory, city, image) VALUES (
+	'$_REQUEST[name]',
+	'$_REQUEST[gender]',
+	'$_REQUEST[fathername]',
+	'$_REQUEST[mothername]',
+	'$_REQUEST[dob]',
+	'$_REQUEST[education]',
+	'$_REQUEST[height]',
+	'$_REQUEST[complex]',
+	'$_REQUEST[profession]',
+	'$_REQUEST[salary]',
+	'$_REQUEST[coordinator]',
+	'$_REQUEST[email]',
+	'$_REQUEST[mobile]',
+	'$_REQUEST[phone]',
+	'$_REQUEST[address]',
+	'$_REQUEST[category]',
+	'$_REQUEST[subcategory]',
+	'$_REQUEST[city]',
+	'$path')");
 			
 			if(!$query){
 				echo mysql_error();

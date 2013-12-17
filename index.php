@@ -28,7 +28,7 @@
         </select>
       </div>
       <div class="col-md-6 homesearchInputHolder">
-        <input type="text" name="searchquery" class="form-control" placeholder="E.g. Real Estate" required="required" />
+        <input type="text" name="searchquery" class="form-control" placeholder="E.g. Real Estate" required />
       </div>
      <div class="col-md-2">
         <input type="text" class="form-control" placeholder="Locality" name="locality" />
@@ -147,8 +147,7 @@
     
     <!-- Islamic -->
     
-    <div class="element islamic"><a href="view.php?c=C1&sc=C1S1">Bayans & Kirath </a></div>
-    <div class="element islamic"><a href="view.php?c=C1&sc=C1S2">Azan</a></div>
+    <div class="element islamic"><a href="bayans.php?c=C1&sc=C1S1">Bayans, Kirath &amp; Azan </a></div>
     <div class="element islamic"><a href="view.php?c=C1&sc=C1S3">Hajj & Umara tours organisers </a></div>
     <div class="element islamic"><a href="view.php?c=C1&sc=C1S4">Madras a & Arabic schools</a></div>
     <div class="element islamic"><a href="view.php?c=C1&sc=C1S5">Baitulmals</a></div>
