@@ -16,5 +16,5 @@ if (!$link) {
     die('Could not connect: ' . mysql_error()); 
 } 
 //echo 'Connected successfully'; 
-mysql_select_db(ammiabba);
+mysql_select_db(supremo);
 ?>

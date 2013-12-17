@@ -68,7 +68,7 @@ body {
     <?php 
 	include('dbconf.php');
 	$path = 'uploads/';
-	$getListing= mysql_query("SELECT * from data");
+	$getListing= mysql_query("SELECT * from data WHERE subcategory='C1S1'");
 	if(!$getListing){
 		echo mysql_error();
 	}
@@ -80,7 +80,7 @@ body {
 		echo '<div class="listElement">';
 		echo("<table class='table table-bordered table-hover'>");
 		echo("<tr><td width='250'>Name</td><td>".$data['name']."</td></tr>"); 
-		echo("<tr><td>Company Info</td><td>".$data['masjid']."</td></tr>");
+		echo("<tr><td>Masjid Name</td><td>".$data['masjid']."</td></tr>");
 		echo("<tr><td>Address</td><td>".$data['address']."</td></tr>");
 		echo("<tr><td>City</td><td>".$data['mobile']."</td></tr>");
 		echo("<tr><td>Land Line Number</td><td>".$data['email']."</td</tr>");

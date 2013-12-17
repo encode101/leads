@@ -204,14 +204,6 @@
     <div class="element matrimonials"><a href="view.php?c=C8&sc=C8S7">Mehndi Designer</a></div>
     <div class="element matrimonials"><a href="view.php?c=C8&sc=C8S8">Jewellery Showrooms</a></div>
     
-    <!-- Music -->
-    <?php
-    	$music=mysql_query("SELECT * FROM music");
-		while($row=mysql_fetch_array($music)){
-			echo '<div class="element music"><a href="uploads/music/'.$row['track_name'].'" download="uploads/music/'.$row['track_name'].'">'.$row[track_title].'</a></div>';
-		}
-	
-	?>
     <!-- Services -->
 <div class="element services "><a href="view.php?c=C4&sc=C4S1 "> Ligal Advisor </a> </div>
 <div class="element services "><a href="view.php?c=C4&sc=C4S2 "> Courier Services </a> </div>
