@@ -97,7 +97,7 @@ body {
 </head>
 
 <body>
-<div class="container">
+<div class="container" id="content" >
   <?php include('header.php') ?>
   <div class="clearfix"></div>
   <ol class="breadcrumb">
@@ -109,7 +109,7 @@ body {
     <?php  echo $pageTitle?>
   </h3>
   <hr/>
-  <div class="col-md-3" id="leftcol"> 
+  <div class="col-md-3"> 
     <!-- Showing All Sub Categories For The Given Category -->
     <div class="subTitle">Related Search</div>
     <?php 
@@ -119,39 +119,12 @@ body {
 	}
   ?>
   </div>
-  <div class="col-md-9" style="padding:0 0 0 0px;">
-    <?php
-	$query=mysql_query("SELECT * FROM data WHERE subcategory='$_REQUEST[sc]'");
-	if(mysql_num_rows($query)==0){
-		echo "<div class='panel panel-danger'><div class='panel-heading'>No Results Found</div><div class='panel-body'>Sorry! We Coudn't Find Any Listing For <strong>".$pageTitle."</strong>. Go back to <a href='index.php'>Homepage</a></div></div>";
-		die;
-	}
-
-	while($row=mysql_fetch_array($query)){
-		if(empty($row['image'])){
-			$path=	"profile.png";
-		}
-		else $path = $row['image'];
-		echo '<div class="listElement">';
-		echo("<table class='table table-bordered table-hover'>");
-		echo("<tr><td width='150'>Company Name</td><td>".$row['company']."</td>
-		<td rowspan='8'>
-		<div class='companyImage'><img src='uploads/profiles/".$path."' align='middle' alt='".$row['company']."'></div>
-		<ul class='cdetails profinfo'>
-			<li><img src='images/icon_footer_phone.png' width='16' height='16' alt='Mobile'>+91 ".$row['mobile']."</li>
-			<li><img src='images/icon_footer_mail.png' width='16' height='16' alt='Email'>".$row['email']."</li>
-		</ul></td></tr>"); 
-		//echo("<tr><td>Mobile Number</td><td>".$row['mobile']."</td></tr>");
-		echo("<tr><td>Company Info</td><td>".$row['description']."</td></tr>");
-		echo("<tr><td>Address</td><td>".$row['address']."</td></tr>");
-		echo("<tr><td>City</td><td>".$row['city']."</td></tr>");
-		echo("<tr><td>Land Line Number</td><td>".$row['phone']."</td</tr>");
-		echo("</table></div><div class='clearfix'></div>");
-	} ?>
-  </div>
+  <div class="col-md-9 listing" style="padding:0 0 0 0px;" id="postedComments">
+   <?php require_once 'jquery-masterLoader.php' ;  ?>
 </div>
-<div id="example"></div>
 <script src="js/jquery-1.10.2.js"></script> 
 <script src="js/bootstrap.min.js"></script> 
+<script src="js/infinite-scroll.js"></script> 
 </body>
 </html>
+

@@ -50,6 +50,7 @@ body {
 .cdetails img {
 	margin:0 20px 0 0px;
 }
+.listElement table tr td:nth-child(2n+1){font-weight:bold;}
 </style>
 <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -87,9 +88,9 @@ body {
 		echo("<tr><td>Download Links</td><td>
 		<div class='col-md-6'>
 		<div class='btn-group'>
-			<a href='".$path."bayan01.mp3' class='btn btn-success'>Bayan &nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-music'></span></a>
-			<a href='".$path."kirath01.mp3' class='btn btn-success'>Kirath &nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-music'></span></a>
-			<a href='".$path."azan01.mp3' class='btn btn-success'>Azan &nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-music'></span></a>
+			<a href='".$path."".$data['bayans']."' class='btn btn-success'>Bayan &nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-music'></span></a>
+			<a href='".$path."".$data['kirath']."' class='btn btn-success'>Kirath &nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-music'></span></a>
+			<a href='".$path."".$data['azan']."' class='btn btn-success'>Azan &nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-music'></span></a>
 		</div>
 			</div>
 		</td></tr>");
